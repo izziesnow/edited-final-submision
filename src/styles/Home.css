@@ -1,0 +1,141 @@
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  min-height: 70vh;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-subtitle {
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-image-container {
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image-placeholder {
+  width: 400px;
+  height: 500px;
+  background-color: var(--bg-secondary);
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.placeholder-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.highlight-icon {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.highlight-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.highlight-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-image-container {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .hero-image-placeholder {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .banner-content h2 {
+    font-size: 1.8rem;
+  }
+}

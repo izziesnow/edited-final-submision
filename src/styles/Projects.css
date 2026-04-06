@@ -1,0 +1,154 @@
+.featured-project {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  margin-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.4rem 1rem;
+  background-color: var(--accent);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+[data-theme='dark'] .project-badge {
+  color: #0f0817;
+}
+
+.project-content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.project-text {
+  flex: 1.5;
+}
+
+.project-icon-large {
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.project-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-role {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.project-desc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.project-impact {
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-primary);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 1rem 1rem 0;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.contributions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contribution {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.contribution svg {
+  color: var(--accent);
+}
+
+.project-visual-placeholder {
+  flex: 1;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.categories-title {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.cat-icon {
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.category-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.cat-role {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.cat-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .project-content {
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .project-visual-placeholder {
+    order: -1;
+  }
+
+  .contributions-grid {
+    grid-template-columns: 1fr;
+  }
+}
